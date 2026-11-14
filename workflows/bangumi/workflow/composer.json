@@ -1,0 +1,38 @@
+{
+  "name": "fradeet/alfred-bangumi-workflow",
+  "description": "For create Alfred workflow easily",
+  "type": "project",
+  "require": {
+    "php": ">=8.3",
+    "ext-curl": "*",
+    "psr/simple-cache": "^3.0",
+    "saloonphp/cache-plugin": "^3.1",
+    "saloonphp/saloon": "^4.0",
+    "symfony/cache": "^7.4 || ^8.0"
+  },
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": "^3.95",
+    "phpstan/phpstan": "^2.2",
+    "symfony/var-dumper": "^8.1"
+  },
+  "license": "GPL-3.0-only",
+  "authors": [
+    {
+      "name": "Fradeet Y.",
+      "email": "41571697+fradeet@users.noreply.github.com"
+    }
+  ],
+  "config": {
+    "sort-packages": true
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Alfred\\Workflow\\": "src/"
+    }
+  }
+}

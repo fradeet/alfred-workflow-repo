@@ -1,0 +1,15 @@
+.DS_Store
+**/node_modules/
+**/vendor/
+**/.pnpm-store/
+**/__pycache__/
+*.pyc
+**/prefs.plist
+**/.sync.ffs_db
+**/sync.ffs_lock
+**/.php-cs-fixer.cache
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.sample
+*.alfredworkflow

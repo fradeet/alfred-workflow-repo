@@ -1,0 +1,11 @@
+parameters:
+    level: 5
+    paths:
+        - workflow/GetRecRowDetailAlfred.php
+        - workflow/scripts
+    excludePaths:
+        analyse:
+            - workflow/scripts/AlfredSFType
+            - workflow/vendor
+    parallel:
+        maximumNumberOfProcesses: 1

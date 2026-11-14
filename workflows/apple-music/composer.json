@@ -1,0 +1,37 @@
+{
+    "name": "fradeet/alfred-apple-music-recommandation",
+    "description": "An Alfred workflow for browsing Apple Music recommendations.",
+    "type": "project",
+    "license": "GPL-3.0-only",
+    "require": {
+        "php": ">=8.5",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "files": [
+            "workflow/scripts/AlfredSFType/AlfredScriptFilterType.php",
+            "workflow/scripts/share/LocalCache.php",
+            "workflow/scripts/share/AppleMusic.php",
+            "workflow/scripts/AlfredAdapter.php"
+        ]
+    },
+    "scripts": {
+        "lint": [
+            "@php -l workflow/scripts/AlfredSFType/AlfredScriptFilterType.php",
+            "@php -l workflow/scripts/share/LocalCache.php",
+            "@php -l workflow/scripts/share/AppleMusic.php",
+            "@php -l workflow/scripts/AlfredAdapter.php",
+            "@php -l workflow/GetRecRowDetailAlfred.php"
+        ],
+        "phpstan": "phpstan analyse --no-progress --debug --memory-limit=512M"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "vendor-dir": "workflow/vendor"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^2.1"
+    }
+}

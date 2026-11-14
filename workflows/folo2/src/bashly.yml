@@ -1,0 +1,36 @@
+name: folo-rss-reader-cli
+version: 0.1.0
+
+commands:
+  - name: auth
+    commands:
+      - name: login
+  - name: timeline
+    catch_all: true
+    flags:
+      - long: --output-format
+        arg: format
+        allowed: [alfred]
+        required: true
+
+dependencies:
+  - curl
+  - jq
+  - npx
+
+environment_variables:
+  - name: NODE_USE_ENV_PROXY
+    default: "1"
+    private: true
+  - name: FRR_CACHE_DIR
+    default: /tmp/folo-rss-reader-cli
+
+flags:
+  - long: --verbose
+    short: -v
+    help: Increase output verbosity (up to -vv)
+    repeatable: true
+
+variables:
+  - name: folo_cli_version
+    value: latest
